@@ -23,7 +23,7 @@ router.post("/api/cars", function(req, res) {
   });
 });
 
-router.put("/api/cats/:id", function(req, res) {
+router.put("/api/cars/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
@@ -63,3 +63,5 @@ router.delete("/api/cars/:id", function(req, res) {
 
 // Export routes for server.js to use.
 module.exports = router;
+
+

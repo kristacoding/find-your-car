@@ -4,7 +4,7 @@ $.ajax({
 	url: url,
 	type: "GET",
     
-    .then(function(response))
+}.then(function(response){}), {
 	success: function(result)
 	{
 		console.log(result);
