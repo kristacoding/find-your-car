@@ -8,13 +8,13 @@ var db = require("../models");
 module.exports = function(app) {
 
     // Get route for all post
-    app.get("/", function (req, res) {
-        db.Car.findAll({})
-        .then(function(dbCar) {
-            res.json(dbCar);
-        });
-    });
-
+    app.get("/", function(req, res) {
+        db.Car.findAll({raw:true}).then(
+          function(data){
+            res.render("index", {cars:data});
+          }
+        )
+      });
     // Get route for posts that make users search 
     app.get("/cars", function(req, res) {
         db.Car.findAll({
