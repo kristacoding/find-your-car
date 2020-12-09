@@ -1,4 +1,4 @@
-use cars;
+use cars_db;
 
 INSERT INTO cars ( location, make, model, mileage, year, purpose)
 VALUES ("Fairfax", "Toyota", "Tacoma", 30000, 2015, true)

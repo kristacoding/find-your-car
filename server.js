@@ -14,7 +14,9 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var routes = require("./controllers/carController.js");
+var routes = require("./controller/carController.js");
+
+var db = require("./db");
 
 app.use(routes);
 
