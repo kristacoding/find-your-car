@@ -1,22 +1,22 @@
-use cars;
+use cars_db;
 
 INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Fairfax", "Toyota", "Tacoma", 30000, 2015, true)
+VALUES ("Fairfax", "Toyota", "Tacoma", 30000, 2015, true);
 
 INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("New York", "Hyundai", "Sonata", 80000, 2013, true)
+VALUES ("New York", "Hyundai", "Sonata", 80000, 2013, true);
 
 INSERT INTO cars ( location, make, model, mileage, year, purpose)
 VALUES ("Philadelphia", "Hyundai", "Santa Fe", 100000, 2008, false)
 
 INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("San Francisco", "Honda", "Civic", 40000, 2017, true)
+VALUES ("San Francisco", "Honda", "Civic", 40000, 2017, true);
 
 INSERT INTO cars ( location, make, model, mileage, year, purpose)
 VALUES ("Baltimore", "Toyota", "Prius", 60000, 2010, false)
 
 INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Boise", "Chevrolet", "Equinox", 75000, 2012, true)
+VALUES ("Boise", "Chevrolet", "Equinox", 75000, 2012, true);
 
 INSERT INTO cars ( location, make, model, mileage, year, purpose)
 VALUES ("Topeka", "Ford", "F150", 130000, 2004, false)
