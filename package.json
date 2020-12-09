@@ -4,9 +4,10 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "all-the-package-names": "^1.3905.0",
     "express": "^4.16.3",
-    "express-handlebars": "^5.2.0"
+    "express-handlebars": "^5.2.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^5.8.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
