@@ -1,6 +1,6 @@
 $(function () {
     //Click event for adding a car
-    $(".car-form").on("search", function (event) {
+    $(".car-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
         //Grab the car information form the form field.  
@@ -20,7 +20,7 @@ $(function () {
             function () {
                 console.log("Added new Car");
                 // Reload the page to get the updated list
-                location.reload();
+                // location.reload();
             }
         );
     });
