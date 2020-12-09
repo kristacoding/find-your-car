@@ -25,7 +25,7 @@
     </div>
 </nav>
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
+    <div class="container car-form">
         <h1 class="display-4" style="middle">Tell me about your car?</h1>
         <form>
             <div class="form-group">
@@ -48,17 +48,15 @@
                 <label for="milage">Milage</label>
                 <input type="milage" class="form-control" id="milage">
             </div>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="sell">Sell</a>
-                    <a class="buy">Buy</a>
-                </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio1" name="sell" class="custom-control-input">
+                <label class="custom-control-label" for="sell">Sell</label>
             </div>
-            <button type="search" class="btn btn-primary">Search</button>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio2" name="buy" class="custom-control-input">
+                <label class="custom-control-label" for="buy">Buy</label>
+            </div>
+            <button type="search" class="btn btn-primary">Submit</button>
         </form>
         <p class="lead">Welcome to the Carmarket Place.</p>
     </div>
@@ -68,7 +66,7 @@
     {{#each cars}}
     <div class="row">
         <div class="col">
-            {{Make}} {{Model}} {{Mileage}} {{Year}} {{Purpose}}
+            <p>Make</p> {{Make}} <p>Model</p>{{Model}} <p>Mileage</p>{{Mileage}} <p>Year</p>{{Year}} <p>Purpose</p>{{Purpose}}
         </div>
     </div>
     {{/each}}
