@@ -5,12 +5,11 @@ $(function () {
         event.preventDefault();
         //Grab the car information form the form field.  
         var newCar = {
-            Location: $("#City").val().trim(),
-            Make: $("#Make").val().trim(),
-            Model: $("#Model").val().trim(),
-            Year: $("#Year").val().trim(),
-            Mileage: $("#Mileage").val().trim(),
-            Sold: false,
+            city: $("#city").val().trim(),
+            make: $("#make").val().trim(),
+            model: $("#model").val().trim(),
+            year: $("#year").val().trim(),
+            mileage: $("#mileage").val().trim()
         };
         console.log(newCar)
         // Send the POST request using ajax.
@@ -25,35 +24,10 @@ $(function () {
         );
     });
 
-    //Click event for "Buy Now" button.
-    $(".change-sold").on("submit", function (event) {
-        // Make sure to preventDefault on a submit event.
-        event.preventDefault();
-        console.log("click");
-        var id = $(this).attr("id");
-        console.log(id);
-        var carSold = $(this).data("sold");
-
-        var newCarSold = {
-            sold: "true"
-        };
-
-        // Send the PUT request using ajax.
-        $.ajax("/cars/" + id, {
-            type: "PUT",
-            data: newCarSold
-        }).then(
-            function () {
-                console.log("changed devour to", carSold);
-                // Reload the page to get the updated list
-                //location.reload();
-            }
-        );
-    });
-
     //Delete car
-    $(".delete").on("click", function(event) {
-        var id = $(this).data("id");
+    $(".delete").on("click", function() {
+        var id = $(this).attr("id");
+        console.log("Click") //this works
     
         // Send the DELETE request.
         $.ajax("/cars/" + id, {
@@ -62,7 +36,7 @@ $(function () {
           function() {
             console.log("deleted car", id);
             // Reload the page to get the updated list
-            location.reload();
+            alert("Car has been deleted")
           }
         );
       });
