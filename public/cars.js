@@ -12,6 +12,7 @@ $(function () {
             mileage: $("#mileage").val().trim()
         };
         console.log(newCar)
+
         // Send the POST request using ajax.
         $.ajax("/new-car", {
             type: "POST",

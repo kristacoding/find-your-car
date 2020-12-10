@@ -13,7 +13,7 @@ INSERT INTO cars ( city, make, model, year, mileage)
 VALUES ("San Francisco", "Honda", "Civic", 2017, 40000);
 
 INSERT INTO cars ( city, make, model, year, mileage)
-VALUES ("Baltimore", "Toyota", "Prius", 2015, 60000)
+VALUES ("Baltimore", "Toyota", "Prius", 2015, 60000);
 
 INSERT INTO cars ( city, make, model, year, mileage)
 VALUES ("Boise", "Chevrolet", "Equinox", 2012, 75000);
