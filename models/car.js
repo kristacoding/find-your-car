@@ -5,9 +5,19 @@ module.exports = function(sequelize, DataTypes) {
         Model: DataTypes.STRING,
         Mileage: DataTypes.INTEGER,
         Year: DataTypes.INTEGER,
-        purpose: DataTypes.BOOLEAN        
-    });
+        sold: DataTypes.BOOLEAN,
+        createdAt: {
+            field: 'created_at',
+            type: DataTypes.DATE,
+        },
+        updatedAt: {
+            field: 'updated_at',
+            type: DataTypes.DATE,
+        },      
+    });        
     return Car;
 };
+
+
   
   

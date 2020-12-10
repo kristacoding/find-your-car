@@ -62,11 +62,13 @@
     </div>
 </div>
 
-<div class="container">
+<div class = "container">
     {{#each cars}}
     <div class="row">
         <div class="col">
             <p>Make</p> {{Make}} <p>Model</p>{{Model}} <p>Mileage</p>{{Mileage}} <p>Year</p>{{Year}} <p>Purpose</p>{{Purpose}}
+            <button type="submit button" class="btn btn-danger change-sold" id={{this.id}}>Buy Now!</button>
+            <button type="submit button" class="btn btn-danger delete" id={{this.id}}>Delete</button>
         </div>
     </div>
     {{/each}}

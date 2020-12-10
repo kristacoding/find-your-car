@@ -48,6 +48,7 @@ module.exports = function(app) {
         });
     });
 
+    //route for deleting car
     app.delete("/cars/:id", function(req, res) {
         db.Car.destory({
             where: {
@@ -59,12 +60,12 @@ module.exports = function(app) {
         });
     });
 
-    // Put route for updating cars, not sure that this one is correct
-    app.put("/cars", function(req, res) {
-        db.Car.update(req.body,
+    // Put route for updating cars from buy to sold
+    app.put("/cars/:id", function(req, res) {
+        db.Car.update(req.params,
           {
             where: {
-              id: req.body.id
+              id: req.params.id
             }
           })
           .then(function(dbCar) {

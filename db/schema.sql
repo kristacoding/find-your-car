@@ -8,6 +8,6 @@ CREATE TABLE cars(
     model VARCHAR(100),
     mileage INT,
     year INT,
-    purpose BOOLEAN,
+    sold BOOLEAN DEFAULT false,
     PRIMARY KEY(id)
 );

@@ -5,13 +5,14 @@ $(function () {
         event.preventDefault();
         //Grab the car information form the form field.  
         var newCar = {
-            car_location: $("#city").val().trim(),
-            car_make: $("#make").val().trim(),
-            car_model: $("#model").val().trim(),
-            car_year: $("#year").val().trim(),
-            car_milage: $("#milage").val().trim(),
-            car_purpose: false,
+            Location: $("#City").val().trim(),
+            Make: $("#Make").val().trim(),
+            Model: $("#Model").val().trim(),
+            Year: $("#Year").val().trim(),
+            Mileage: $("#Mileage").val().trim(),
+            Sold: false,
         };
+        console.log(newCar)
         // Send the POST request using ajax.
         $.ajax("/new-car", {
             type: "POST",
@@ -19,9 +20,51 @@ $(function () {
         }).then(
             function () {
                 console.log("Added new Car");
-                // Reload the page to get the updated list
-                // location.reload();
+                alert("New Car has been Added");
             }
         );
     });
-})
+
+    //Click event for "Buy Now" button.
+    $(".change-sold").on("submit", function (event) {
+        // Make sure to preventDefault on a submit event.
+        event.preventDefault();
+        console.log("click");
+        var id = $(this).attr("id");
+        console.log(id);
+        var carSold = $(this).data("sold");
+
+        var newCarSold = {
+            sold: "true"
+        };
+
+        // Send the PUT request using ajax.
+        $.ajax("/cars/" + id, {
+            type: "PUT",
+            data: newCarSold
+        }).then(
+            function () {
+                console.log("changed devour to", carSold);
+                // Reload the page to get the updated list
+                //location.reload();
+            }
+        );
+    });
+
+    //Delete car
+    $(".delete").on("click", function(event) {
+        var id = $(this).data("id");
+    
+        // Send the DELETE request.
+        $.ajax("/cars/" + id, {
+          type: "DELETE"
+        }).then(
+          function() {
+            console.log("deleted car", id);
+            // Reload the page to get the updated list
+            location.reload();
+          }
+        );
+      });
+});
+
