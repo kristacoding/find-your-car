@@ -1,6 +1,6 @@
 var express = require("express");
 var db = require("./models");
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 var app = express();
 
 app.use(express.static("public"));
@@ -23,4 +23,3 @@ db.sequelize.sync({ force: false }).then(function() {
       console.log("App listening on PORT " + PORT);
     });
   });
-  

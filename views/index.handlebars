@@ -29,7 +29,7 @@
         <h1 class="display-4" style="middle">Tell me about your car?</h1>
         <form>
             <div class="form-group">
-                <label for="city">Car Locations</label>
+                <label for="city">Car Location</label>
                 <input type="city" class="form-control" id="city" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
@@ -46,28 +46,25 @@
             </div>
             <div class="form-group">
                 <label for="milage">Milage</label>
-                <input type="milage" class="form-control" id="milage">
-            </div>
-            <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio1" name="sell" class="custom-control-input">
-                <label class="custom-control-label" for="sell">Sell</label>
-            </div>
-            <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio2" name="buy" class="custom-control-input">
-                <label class="custom-control-label" for="buy">Buy</label>
+                <input type="milage" class="form-control" id="mileage">
             </div>
             <button type="search" class="btn btn-primary">Submit</button>
         </form>
-        <p class="lead">Welcome to the Carmarket Place.</p>
+        
     </div>
 </div>
 
-<div class="container">
+<div class = "container">
+    <h2>Available Cars</h2>
     {{#each cars}}
     <div class="row">
-        <div class="col">
-            <p>Make</p> {{Make}} <p>Model</p>{{Model}} <p>Mileage</p>{{Mileage}} <p>Year</p>{{Year}} <p>Purpose</p>{{Purpose}}
-        </div>
+        <div class="col card" style="width:18rem;">
+            <div class = "card-body">
+            <h5 class="card-title">Make: {{make}} {{model}}</h5>
+            <h6 class="card-subtitle mb-2">Year: {{year}}    Mileage: {{mileage}}</h6>
+            <p class="card-text">Pick this {{make}} {{model}} up in {{city}}!</p>
+            <p><button type="submit button" class="btn btn-primary delete" id={{this.id}}>Buy Now!</button></p>
+            </div>
     </div>
     {{/each}}
 </div>

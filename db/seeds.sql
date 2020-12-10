@@ -1,68 +1,64 @@
 use cars_db;
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Fairfax", "Toyota", "Tacoma", 30000, 2015, true);
+INSERT INTO cars (city, make, model, year, mileage)
+VALUES ("Fairfax", "Toyota", "Tacoma", 2015, 20000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("New York", "Hyundai", "Sonata", 80000, 2013, true);
+INSERT INTO cars (city, make, model, year, mileage)
+VALUES ("New York", "Hyundai", "Sonata", 2013, 80000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Philadelphia", "Hyundai", "Santa Fe", 100000, 2008, false)
+INSERT INTO cars (city, make, model, year, mileage)
+VALUES ("Philadelphia", "Hyundai", "Santa Fe", 2008, 10000)
 
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("San Francisco", "Honda", "Civic", 2017, 40000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("San Francisco", "Honda", "Civic", 40000, 2017, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Baltimore", "Toyota", "Prius", 2015, 60000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Baltimore", "Toyota", "Prius", 60000, 2010, false)
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Boise", "Chevrolet", "Equinox", 2012, 75000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Boise", "Chevrolet", "Equinox", 75000, 2012, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Topeka", "Ford", "F150", 2004, 130000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Topeka", "Ford", "F150", 130000, 2004, false);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Memphis", "Honda", "CRV", 2001, 200000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Memphis", "Honda", "CRV", 200000, 2001, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Atlanta", "Volkswagen", "Jetta", 2011, 140000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Atlanta", "Volkswagen", "Jetta", 140000, 2002, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("New York", "Audi", "A5", 2018, 20000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("New York", "Audi", "A5", 20000, 2018, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Wilmington", "Subaru", "Forester", 2014, 55000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Wilmington", "Subaru", "Forester", 55000, 2014, false);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Richmond", "Mitsubishi", "Outlander", 2014, 500000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Richmond", "Mitsubishi", "Outlander", 105000, 2014, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Knoxville", "Buick", "Enclave", 2016, 85000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Knoxville", "Buick", "Enclave", 85000, 2016, false);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Miami", "Nissan", "Altima", 2012, 45000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Miami", "Nissan", "Altima", 45000, 2012, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Charlotte", "Mercedez", "Benz C-Class", 2005, 110000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Charlotte", "Mercedez", "Benz C-Class", 110000, 2005, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Charleston", "Kia", "Optima", 2019, 25000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Charleston", "Kia", "Optima", 25000, 2019, true);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Atlanta", "Mazda", "CX-9", 2010, 50000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Atlanta", "Mazda", "CX-9", 50000, 2010, false);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Jacksonville", "Chevrolet", "Maliba", 2011, 90000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Jacksonville", "Chevrolet", "Maliba", 90000, 2011, false);
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Chicago", "Jeep", "Grand Cherokee", 2018, 35000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Chicago", "Jeep", "Grand Cherokee", 35000, 2018, true);
+INSERT INTO cars ( city, make, model,year, mileage)
+VALUES ("Detroit", "Chevrolet", "Camaro", 2015, 65000);
 
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Detroit", "Chevrolet", "Camaro", 65000, 2015, false);
-
-INSERT INTO cars ( location, make, model, mileage, year, purpose)
-VALUES ("Philadelphia", "Dodge", "Charger", 150000, 1999, true);
-
-
-
+INSERT INTO cars ( city, make, model, year, mileage)
+VALUES ("Philadelphia", "Dodge", "Charger", 1999, 150000);

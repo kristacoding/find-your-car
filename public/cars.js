@@ -5,13 +5,14 @@ $(function () {
         event.preventDefault();
         //Grab the car information form the form field.  
         var newCar = {
-            car_location: $("#city").val().trim(),
-            car_make: $("#make").val().trim(),
-            car_model: $("#model").val().trim(),
-            car_year: $("#year").val().trim(),
-            car_milage: $("#milage").val().trim(),
-            car_purpose: false,
+            city: $("#city").val().trim(),
+            make: $("#make").val().trim(),
+            model: $("#model").val().trim(),
+            year: $("#year").val().trim(),
+            mileage: $("#mileage").val().trim()
         };
+        console.log(newCar)
+
         // Send the POST request using ajax.
         $.ajax("/new-car", {
             type: "POST",
@@ -19,9 +20,26 @@ $(function () {
         }).then(
             function () {
                 console.log("Added new Car");
-                // Reload the page to get the updated list
-                // location.reload();
+                alert("New Car has been Added");
             }
         );
     });
-})
+
+    //Delete car
+    $(".delete").on("click", function() {
+        var id = $(this).attr("id");
+        console.log("Click") //this works
+    
+        // Send the DELETE request.
+        $.ajax("/cars/" + id, {
+          type: "DELETE"
+        }).then(
+          function() {
+            console.log("deleted car", id);
+            // Reload the page to get the updated list
+            alert("Car has been deleted")
+          }
+        );
+      });
+});
+
