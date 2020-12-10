@@ -29,7 +29,7 @@
         <h1 class="display-4" style="middle">Tell me about your car?</h1>
         <form>
             <div class="form-group">
-                <label for="city">Car Locations</label>
+                <label for="city">Car Location</label>
                 <input type="city" class="form-control" id="city" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
@@ -50,17 +50,21 @@
             </div>
             <button type="search" class="btn btn-primary">Submit</button>
         </form>
-        <p class="lead">Welcome to the Carmarket Place.</p>
+        
     </div>
 </div>
 
 <div class = "container">
+    <h2>Available Cars</h2>
     {{#each cars}}
     <div class="row">
-        <div class="col">
-            <p>Make</p> {{make}} <p>Model</p>{{model}} <p>Year</p>{{year}} <p>Mileage</p>{{mileage}}
-            <p><button type="submit button" class="btn btn-danger change-sold" id={{this.id}}>Buy Now!</button></p>
-            <p><button type="submit button" class="btn btn-danger delete" id={{this.id}}>Delete</button></p>
+        <div class="col card" style="width:18rem;">
+            <div class = "card-body">
+            <h5 class="card-title">Make: {{make}} {{model}}</h5>
+            <h6 class="card-subtitle mb-2">Year: {{year}}    Mileage: {{mileage}}</h6>
+            <p class="card-text">Pick this {{make}} {{model}} up in {{city}}!</p>
+            <p><button type="submit button" class="btn btn-primary delete" id={{this.id}}>Buy Now!</button></p>
+            </div>
         </div>
     </div>
     {{/each}}

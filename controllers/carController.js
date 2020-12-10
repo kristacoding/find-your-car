@@ -47,7 +47,7 @@ module.exports = function(app) {
 
     //route for deleting car
     app.delete("/cars/:id", function(req, res) {
-        db.Cars.destroy({
+        db.Car.destroy({
             where: {
                 id: req.params.id
             }
