@@ -1,5 +1,4 @@
-var Chart = require('chart.js');
-var ctx = document.getElementById('myChart');
+var ctx = document.getElementById('myChart').getContext('2d');
 
 // Our labels along the x-axis
 var city = ["Baltimore", "Boise", "FairFax", "New York", "Philadelphia", "San Francisco", "Topeka", "Memphis", "Atlanta", "Wilmington", "Richmond", "Knoxville", "Miami", "Charlotte", "Charleston", "Atlanta", "Jacksonville", "Detroit", "Chicago"];
@@ -9,13 +8,13 @@ var Baltimore = [60000];
 var Boise = [75000];
 var Topeka = [130000];
 var Memphis = [200000];
-var Atlanta = [140000];
+var Atlanta = [140000, 8000];
 var FairFax = [20000];
-var New York = [80000, 20000];
+var NewYork = [80000, 20000];
 var Philadelphia = [10000, 150000];
-var San Francisco = [40000];
+var SanFrancisco = [40000];
 var Wilmington = [55000];
-var Richmond = [500000];
+var Richmond = [50000];
 var Knoxville = [85000];
 var Miami = [45000];
 var Charlotte = [110000];
@@ -27,119 +26,117 @@ var Detroit = [65000];
 
 
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: city,
         datasets: [{
             data: Baltimore,
             label: "Baltimore",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "red",
+            fill: true
         },
         {
             data: Boise,
             label: "Boise",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "blue",
+            fill: true
         },
         {
             data: Topeka,
             label: "Topeka",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "green",
+            fill: true
         },
         {
             data: Memphis,
             label: "Memphis",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "orange",
+            fill: true
         },
         {
             data: Atlanta,
             label: "Atlanta",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "purple",
+            fill: true
         },
         {
             data: FairFax,
             label: "FairFax",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "yellow",
+            fill: true
         },
         {
-            data: New York,
+            data: NewYork,
             label: "New York",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "pink",
+            fill: true
         },
         {
             data: Philadelphia,
             label: "Philadelphia",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "brown",
+            fill: true
         },
         {
-            data: San Francisco,
+            data: SanFrancisco,
             label: "San Francisco",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "blue",
+            fill: true
         },
         {
             data: Wilmington,
             label: "Wilmington",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "green",
+            fill: true
         },
         {
             data: Richmond,
             label: "Richmond",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "red",
+            fill: true
         },
         {
             data: Knoxville,
             label: "Knoxville",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "orange",
+            fill: true
         },
         {
             data: Miami,
             label: "Miami",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "purple",
+            fill: true
         },
         {
             data: Charlotte,
             label: "Charlotte",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "pink",
+            fill: true
         },
         {
             data: Charleston,
             label: "Charleston",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "green",
+            fill: true
         },
         {
             data: Jacksonville,
             label: "Jacksonville",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "red",
+            fill: true
         },
         {
             data: Chicago,
             label: "Chicago",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "orange",
+            fill: true
         },
         {
             data: Detroit,
             label: "Detroit",
-            borderColor: "#3e95cd",
-            fill: false
+            borderColor: "yello",
+            fill: true
         },
     ]
     }
 })
-
-module.exports(myChart); 
