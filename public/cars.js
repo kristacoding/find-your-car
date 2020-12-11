@@ -9,7 +9,7 @@ $(function () {
             make: $("#make").val().trim(),
             model: $("#model").val().trim(),
             year: $("#year").val().trim(),
-            mileage: $("#mileage").val().trim()
+            mileage: $("#mileage").val().trim(),
         };
         console.log(newCar)
         // Send the POST request using ajax.
@@ -25,20 +25,20 @@ $(function () {
     });
 
     //Delete car
-    $(".delete").on("click", function() {
+    $(".delete").on("click", function () {
         var id = $(this).attr("id");
         console.log("Click") //this works
-    
+
         // Send the DELETE request.
         $.ajax("/cars/" + id, {
-          type: "DELETE"
+            type: "DELETE"
         }).then(
-          function() {
-            console.log("deleted car", id);
-            // Reload the page to get the updated list
-            alert("Car has been deleted")
-          }
+            function () {
+                console.log("deleted car", id);
+                // Reload the page to get the updated list
+                alert("Car has been deleted")
+            }
         );
-      });
+    });
 });
 
