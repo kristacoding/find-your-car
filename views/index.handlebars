@@ -21,9 +21,14 @@
         </ul>
     </div>
 </nav>
-<div class="jumbotron jumbotron-fluid">
+
+<header>
+    <h1>Car Marketplace</h1>
+</header>
+
+<section class="jumbotron jumbotron-fluid">
     <div class="container car-form">
-        <h1 class="display-4" style="middle">Tell Us About Your Car?</h1>
+        <h2 class="display-4" style="middle">Tell Us About Your Car</h2>
         <form>
             <div class="form-group">
                 <label for="city">Car Location</label>
@@ -49,9 +54,9 @@
         </form>
         
     </div>
-</div>
+</section>
 
-<div class = "container">
+<section class = "container">
     <h2>Available Cars</h2>
     {{#each cars}}
     <div class="row">
@@ -66,4 +71,13 @@
             </div>
     </div>
     {{/each}}
-</div>
+</section>
+
+<aside class = "container">
+  <canvas id="myChart" width="400" height="400"></canvas>
+</aside>
+
+<footer class="container">
+    <h7>Made for Driver's Everywhere - Car Marketplace</h7>
+    <p>Contact Us today at everywhere@carmarketplace.com</p>
+</footer>

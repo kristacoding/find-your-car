@@ -1,3 +1,7 @@
+header {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/54c66a43e4b0bb7945f2741b/1428627060000-0MEOS7V9OSL5306CMGYS/ke17ZwdGBToddI8pDm48kPipDBN8EsXn0GX4VYEjDvAUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dvZ3jQfF9Y_RaUFg7xfoXGgF5NMU0ljZvRJBf4K6SXuOZDqXZYzu2fuaodM4POSZ4w/WebsiteHeader.jpg?format=2500w);
+}
+
 body {
     font-family: 'Bebas Neue', cursive;
     font-size: large;
@@ -17,10 +21,21 @@ body {
     background-color: rgba(185, 230, 245, 0.603);
 }
 
+.h1 {
+    line-height: 4;
+}
+
 h1 {
     text-align: center;
+    color: whitesmoke;
+    font-size: 80px;  
 }
 
 h2 {
     text-align: center; 
+    font-size: 45px;
+}
+
+footer {
+    text-align: center;
 }
