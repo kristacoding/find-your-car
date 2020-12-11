@@ -1,0 +1,26 @@
+body {
+    font-family: 'Bebas Neue', cursive;
+    font-size: large;
+    color: #387490;
+}
+
+.navbar {
+    color: rgba(185, 230, 245, 0.603);
+}
+
+.btn {
+    background-color: #1186f3;
+    font-size: 25px;
+}
+
+.jumbotron {
+    background-color: rgba(185, 230, 245, 0.603);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center; 
+}

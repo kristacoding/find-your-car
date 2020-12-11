@@ -7,10 +7,7 @@
         <a class="navbar-brand" href="#">Car Marketplace</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Buy Your Car <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Sell Your Car</a>
+                <a class="nav-link" href="#">Tell Us About Your Car <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Financing</a>
@@ -19,14 +16,14 @@
                 <a class="nav-link" href="#">Research</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Help</a>
+                <a class="nav-link" href="#">Contact Us</a>
             </li>
         </ul>
     </div>
 </nav>
 <div class="jumbotron jumbotron-fluid">
     <div class="container car-form">
-        <h1 class="display-4" style="middle">Tell me about your car?</h1>
+        <h1 class="display-4" style="middle">Tell Us About Your Car?</h1>
         <form>
             <div class="form-group">
                 <label for="city">Car Location</label>
@@ -60,6 +57,8 @@
     <div class="row">
         <div class="col card" style="width:18rem;">
             <div class = "card-body">
+            <img src="https://via.placeholder.com/150" class="carImage" data-make="{{make}}" data-model="{{model}}" data-year="{{year}}"/>   
+            <p></p>
             <h5 class="card-title">Make: {{make}} {{model}}</h5>
             <h6 class="card-subtitle mb-2">Year: {{year}}    Mileage: {{mileage}}</h6>
             <p class="card-text">Pick this {{make}} {{model}} up in {{city}}!</p>
